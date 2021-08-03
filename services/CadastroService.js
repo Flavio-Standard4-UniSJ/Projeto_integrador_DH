@@ -22,7 +22,8 @@ const CadastroService = {
         email,  
         telefone,
         senha,
-        data_nascimento
+        data_nascimento,
+        preferenciasCliente
         ) => {
 
         const novoCliente = await database.Cliente.create({
@@ -32,6 +33,15 @@ const CadastroService = {
             senha,
             data_nascimento
         })
+        
+        const idCliente = await novoCliente.dataValues.id
+        preferenciasCliente.forEach(async (preferencia) => {
+            const novaPreferencia = await database.ClientePreferencia.create({
+                clientes_id: idCliente,
+                preferencia_id: preferencia
+            })
+        })
+
         return novoCliente        
     },
 

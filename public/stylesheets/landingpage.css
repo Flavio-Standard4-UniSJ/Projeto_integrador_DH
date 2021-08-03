@@ -1,9 +1,15 @@
+
+@font-face{
+	font-family: 'TipoFonte';
+	src: url("../fonts/OpenSans-Regular.ttf");
+}
 * {
     box-sizing: border-box;
     border: 0;
     outline: 0;
     padding: 0;
-    margin: 0
+    margin: 0;
+    font-family: 'TipoFonte', sans-serif;
 }
 
 /* -- BODY ----------------------------------------------------------------------------------------- */
@@ -25,6 +31,8 @@ body {
 
 
 /* -- HEADER -----------------------------------------------------------------------------------------*/
+/*
+
 header {
     width: 100%;
     height: 60px;
@@ -54,11 +62,13 @@ header nav {
     height: 60%px;
     
 }
+*/
 /*-- FIM HEADER --------------------------------------------------------------------------------------*/
 
 /* -- MAIN -------------------------------------------------------------------------------------------*/
 
 /*-- Apresentação --*/
+/*
 .merchandizing {
     width: 100%;
     margin: 5px 0px 10px;
@@ -76,9 +86,11 @@ main button {
     background-color: #47525E;
     margin-left: 50px;
 }
+*/
 /*-- Fim apresentação --*/
 
 /*-- Chamada --*/
+/*
 .chamada {
     width: 100%;
     margin-top: 10px;
@@ -86,6 +98,10 @@ main button {
     flex-direction: column;
     align-items: center;
     padding: 5px 0px;
+}
+
+.chamada span{
+    font-size: 20px;
 }
 
 .chamada .logo-herois {
@@ -101,9 +117,11 @@ main button {
     width: 100px;
     margin: 5px;
 }
+*/
 /*-- Fim chamada --*/
 
 /*-- Conteúdo 1 --*/
+/*
 .container {
     background-color: #CACED2 ;
     width: 100%;
@@ -119,7 +137,9 @@ main button {
     flex-wrap: wrap;
     justify-content: center;
     /* align-items: center; */
+    /*
 }
+
 
 .capa-gibi {
     border: 1px solid black;
@@ -148,28 +168,35 @@ h2 {
     font-size: 40px;
     font-weight: 900;
     margin-bottom: 40px;
+    font-family: 'TipoFonte', sans-serif;
 }
 
 h3 {
     font-size: 30px;
     font-weight: 900;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
+    font-family: 'TipoFonte', sans-serif; 
 }
 
 p {
     font-size: 15px;
     margin-bottom: 20px;
+    font-family: 'TipoFonte', sans-serif;
 }
+*/
 /*-- Fim conteúdo 1 --*/
 
 /*-- Conteúdo 2 --*/
+/*
 .recursos {
     width: 100%;
     margin: 10px 0px;
 }
+*/
 /*-- Fim conteúdo 2 --*/
 
 /*-- Imprensa --*/
+/*
 .imprensa {
     background-color: #CACED2;
     width: auto;
@@ -192,12 +219,13 @@ p {
     width: 40px;
     height: 40px;
 }
+*/
 /*-- Fim imprensa --*/
 
 /* -- FIM MAIN ---------------------------------------------------------------------------------------*/
 
 /* -- FOOTER -----------------------------------------------------------------------------------------*/
-
+/*
 footer {
     background-color: #212121;
     color: #FFF;
@@ -208,6 +236,7 @@ footer {
 }
 
 /*-- Logo e Redes sociais --*/
+/*
 .redes-sociais {
     display: flex;
     justify-content: space-between;
@@ -223,13 +252,14 @@ footer {
     width: 50px;
 }
 /*-- Fim Logo e Redes Sociais --*/
-
+/*
 .capsula {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 /*-- Links --*/
+/*
 .capsula .links {
     display: flex;
     justify-content: space-around;
@@ -238,6 +268,7 @@ footer {
 /*-- Fim links --*/
 
 /*-- Newsletter --*/
+/*
 .capsula .newsletter {
     align-self: center;
 }
@@ -254,7 +285,7 @@ footer {
 }
 /*-- Fim newsletter --*/
 /* -- FIM FOOTER -------------------------------------------------------------------------------------*/
-
+/*
 @media (min-width: 550px) {
     .chamada {
         align-items: center;
@@ -308,4 +339,315 @@ footer {
     }
 }
 
+*/
+/* estilo landingpage  */
+header {
+    width: 100%;
+    height: 60px;
+    background-color:#969FAA;
+    display: flex;
+    justify-content: space-between;
+}
 
+header span {
+    align-self: center;
+    margin-left: 10px;
+}
+
+header a#cadastro{
+    align-self: center;
+    margin-right: 10px;
+    padding: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(202, 17, 17, 0.75);
+}
+
+
+div.merchandizing img{
+    width: 100%;
+    height: 474px;
+    position: relative;
+    z-index: 3;
+}
+
+div#convite{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 89%;
+    height: 474px;
+    position: absolute;
+    top: 60px;
+    z-index: 4;
+}
+
+main{
+    background: white;
+}
+
+footer{
+    background: rgb(39, 37, 37);
+    color: white;
+}
+
+main, footer{
+    width: 90vw;
+    height: auto;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+
+main > button{
+    position: absolute;
+    padding: 18px;
+    top: 400px;
+    left: 40%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 5;
+    width: 180px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+main > div.chamada {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0px;
+}
+
+div.logo-herois{
+    width: 95%;
+    height: 100px;
+}
+
+.simbolo-heroi {
+    width: 70px;
+    margin: 5px;
+}
+
+
+.quadrinhos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+   
+}
+
+.capa-gibi {
+    border: 1px solid black;
+    width: 25%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.capa-gibi img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2rem;
+}
+
+.container {
+    background-color: #CACED2 ;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+}
+
+.quadrinhos {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+
+.descricao {
+    width: 50%;
+    padding: 10px;
+}
+
+div.descricao p{
+    text-align: justify;
+    line-height: normal;
+}
+
+
+section.imprensa div img{
+    width: 40px;
+    height: 40px;
+}
+
+/*  footer*/
+section.cadastro > form{
+    width: 55vw;
+    margin: 0 auto;
+    padding: 15px;
+    background-color:#969FAA;
+    border-radius: 10px;
+}
+
+section.cadastro > p{
+    width: 55vw;
+    text-transform: uppercase;
+    margin: 25px auto 10px;
+}
+
+section.cadastro > form input[type=text],
+section.cadastro > form input[type=password],
+section.cadastro > form input[type=number],
+section.cadastro > form input[type=tel],
+section.cadastro > form input[type=email] {
+    display: block;
+    width: 50vw;
+    margin-bottom: 15px;
+}
+
+section.cadastro > form > button{
+    padding: 15px;
+    width: 100%;
+    margin-top: 15%;
+    margin-bottom: 15px;
+}
+
+section.cadastro > form > div button{
+    width: 70px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+section.newsletter form {
+    width: 55vw;
+    margin: 25px auto 0;
+}
+
+section.newsletter form > input{
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+section.newsletter > form > button{
+    width: 70px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+div.dados > label, div.dados > span.error{
+    display: none;
+}
+
+div.dados{
+    margin-right: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+} 
+
+
+div.dados, div.desktop{
+    flex-direction: column;
+}
+
+div.desktop ul li{
+    list-style: none;
+}
+
+div > button.botao{
+    flex-direction: inherit;
+}
+
+@media (min-width: 480px){
+
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px){
+    .simbolo-heroi {
+        width: 80px;
+
+    }
+
+    .chamada .logo-herois {
+        max-width: 100%;
+    }
+
+    .capsula {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 479px){
+    main button{
+        width: 115px;
+        font-size: .8rem;
+    }
+    .simbolo-heroi {
+        width: 40px;
+    }
+    
+    h1{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    h3{
+        font-size: .8rem;
+    }
+}
+@media (max-width: 479px) {
+    main div.merchandizing img{
+        height: 240px;
+    }
+    
+    .container {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .quadrinhos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section.newsletter > form > button{
+        width: 180px;
+    }
+
+}

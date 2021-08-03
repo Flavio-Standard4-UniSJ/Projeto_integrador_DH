@@ -1,11 +1,15 @@
-// const fs = require('fs');
+// const fs = require('fs'); 
 // const path = require('path');
-// const comicsdb = path.join(__dirname, '../comicdb.json');
+// const comicsdb = path.join(__dirname, '../comicdb.json'); 
 const ComicService = require('../services/ComicService')
+const database = require('../database/models/index');
 
 const ComicController = {
-    index: (req, res) =>{
-        res.render('telaAdmin')
+
+    index: async (req, res) =>{
+        const preferencias = await database.Preferencia.findAll({attributes: ['id','preferencias']})
+        res.render('telaAdmin', {preferencias: preferencias})
+
     },
 
     storeComic: async (req, res) => {
@@ -16,15 +20,19 @@ const ComicController = {
             titulo,
             autor,
             ano,
-            sinopse
+            sinopse,
+            preferenciasComic
         } = req.body;
+
+        console.log(preferenciasComic)
         
         const { endereço } = await ComicService.createComic(
             comicThings,
             titulo,
             autor,
             ano,
-            sinopse
+            sinopse,
+            preferenciasComic
             )
         
         res.json({
@@ -44,10 +52,10 @@ const ComicController = {
 
     readPdf: async (req, res) =>{
         const { id } = req.params;
-        const { endereço } = await ComicService.getComic(id);
+        const [comic] = await ComicService.getComic(id);
         //return res.json(endereço);
         // return res.render('comicpage', {comic : comic })
-        return res.render('viewer', {caminho: endereço})
+        return res.render('viewer', {caminho: comic.endereço})
     },
 
     updateComic: async (req, res) => {

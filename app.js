@@ -19,6 +19,7 @@ const cadastroRouter = require('./routes/cadastro');
 const comicRouter = require('./routes/comic');
 const adminRouter = require('./routes/admin');
 const ComicController = require('./controller/ComicController');
+const landingPageRouter = require('./routes/landingPage')
 
 const app = express();
 const uploadsFile = multer({storage : storage});
@@ -42,6 +43,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/landingPage', landingPageRouter);
+app.use('/cadastro', landingPageRouter);
 app.use('/users', usersRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/comicpage', comicRouter);

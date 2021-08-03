@@ -25,6 +25,29 @@ const UserService = {
             { expiresIn: '48h' }    
     )
     return token
+    },
+    clientePreferencia: async (id) => {
+        const cliente = await database.Cliente.findOne({
+            where: {
+                id
+            },
+            include: {
+                model: database.Preferencia,
+                required: true
+            }
+        });
+        
+        const { Preferencia } = cliente
+        const preferenciasIds = Preferencia.map( elem => elem.id)
+
+        const clientePreferencias = await database.Preferencia.findAll({
+            where: { 
+                id: { [Op.in]: preferenciasIds}
+            },
+            include: [{ model: database.Comic }]
+        });
+
+        return clientePreferencias
     }
 }
 

@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site de HQ</title>
 
-    <link href="../public/stylesheets/landingpage.css" rel="stylesheet"  />
+  <link href="/stylesheets/landingpage.css" rel="stylesheet"  />
 </head>
 <body>
     <!-- CABEÇALHO -->
     <header>
         <span src="">Logo</span>
-        <nav>
-            <img class="crtl_user"src="../public/images/hamburguer.png"/>
-            <img class="crtl_user"src="../public/images/profile.png"/>
-        </nav>
+        <a href="#cadastro" id="cadastro">Cadastre-se</a>
+        <!--<nav>
+            <img class="crtl_user"src="/images/hamburguer.png"/>
+            <img class="crtl_user"src="/images/profile.png"/>
+        </nav>-->
     </header>
     <!-- FIM CABEÇALHO -->
 
@@ -26,8 +27,9 @@
         <!-- FIM CAPA -->
 
         <!-- APRESENTAÇÃO -->
+        <div id="convite"></div>
         <div class="merchandizing">
-            <img class="convite" src="../public/images/convite.png" />
+            <img class="convite" src="/images/convite.png" />
         </div>
 
         <button>Cadastre-se</button>
@@ -35,16 +37,16 @@
 
         <!-- CHAMADA -->
         <div class="chamada">
-            <span>O melhor dos quadrinhos em um só lugar !</span>
+            <h1>O melhor dos quadrinhos em um só lugar !</h1>
             <div class="logo-herois">
-                <img class="simbolo-heroi" src="../public/images/naruto.png"/>
-                <img class="simbolo-heroi" src="../public/images/Dragonball.png"/>
-                <img class="simbolo-heroi" src="../public/images/DoctorStrange.png"/>
-                <img class="simbolo-heroi" src="../public/images/JL.png"/></li>
-                <img class="simbolo-heroi" src="../public/images/super-homem.png"/>
-                <img class="simbolo-heroi" src="../public/images/batman.png"/>
-                <img class="simbolo-heroi" src="../public/images/avengers.png"/>
-                <img class="simbolo-heroi" src="../public/images/x-men.png"/>
+                <img class="simbolo-heroi" src="/images/naruto.png"/>
+                <img class="simbolo-heroi" src="/images/Dragonball.png"/>
+                <img class="simbolo-heroi" src="/images/DoctorStrange.png"/>
+                <img class="simbolo-heroi" src="/images/JL.png"/></li>
+                <img class="simbolo-heroi" src="/images/super-homem.png"/>
+                <img class="simbolo-heroi" src="/images/batman.png"/>
+                <img class="simbolo-heroi" src="/images/avengers.png"/>
+                <img class="simbolo-heroi" src="/images/x-men.png"/>
             </div>
         </div>
         <!-- FIM CHAMADA -->
@@ -55,19 +57,19 @@
             <!-- Quadrinhos--> 
             <div class="quadrinhos">
                 <div class="capa-gibi">
-                    <img src="../public/images/avengers.png" alt="capa do gibi">
+                    <img src="/images/avengers.png" alt="capa do gibi">
                 </div>
 
                 <div class="capa-gibi">
-                    <img src="../public/images/flash.png" alt="capa do gibi">
+                    <img src="/images/flash.png" alt="capa do gibi">
                 </div>
 
                 <div class="capa-gibi">
-                    <img src="../public/images/Dragonball.png" alt="capa do gibi">
+                    <img src="/images/Dragonball.png" alt="capa do gibi">
                 </div>
 
                 <div class="capa-gibi">
-                    <img src="../public/images/naruto.png" alt="capa do gibi">
+                    <img src="/images/naruto.png" alt="capa do gibi">
                 </div>
             </div>
             <!-- Fim quadrinhos -->
@@ -132,7 +134,7 @@
 
             <div class="quadrinhos">
                 <div class="capa-gibi">
-                    <img src="../public/images/avengers.png" alt="capa do gibi">
+                    <img src="/images/avengers.png" alt="capa do gibi">
                 </div>
             </div>
         </section>
@@ -142,13 +144,13 @@
         <section class="imprensa">
             <span>O que estão dizendo sobre nós ?</span>
             <div>
-                <img src="../public/images/magazine1.png"/>
-                <img src="../public/images/magazine2.png"/>
-                <img src="../public/images/magazine3.png"/>
-                <img src="../public/images/magazine1.png"/>
-                <img src="../public/images/magazine2.png"/>
-                <img src="../public/images/magazine3.png"/>
-                <img src="../public/images/magazine1.png"/>
+                <img src="/images/magazine1.png"/>
+                <img src="/images/magazine2.png"/>
+                <img src="/images/magazine3.png"/>
+                <img src="/images/magazine1.png"/>
+                <img src="/images/magazine2.png"/>
+                <img src="/images/magazine3.png"/>
+                <img src="/images/magazine1.png"/>
             </div>
         </section>
         <!-- FIM IMPRENSA -->
@@ -156,59 +158,55 @@
 
     <!-- FOOTER -->
     <footer>
-        <!-- Logo e Redes Sociais-->
-        <section class="redes-sociais">
-            <span>LOGO</span>
-            <div>
-                <img src="../public/images/facebook.png" alt="logo facebook">
-                <img src="../public/images/twitter.png" alt="logo twitter">
-                <img src="../public/images/instagram.png" alt="logo instagram">
+       <section class="cadastro">
+        <p>Cadastre-se</p>
+        <form action="/cadastro" id="cadastro" method="POST">
+            <div class="dados">
+                <label for="nome">Digite seu nome</label>
+                <input type="text" name="nome" id="nome" placeholder="nome">
+                <span id="nomeError" class="error">Nome incorreto</span>
+                <label for="email">Digite seu email</label>
+                <input type="email" name="email" id="email" placeholder="email">
+                <span id="emailError" class="error">Nome incorreto</span>
+                <label for="telefone">Digite seu telefone</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="telefone">
+                <span id="telefoneError" class="error">Nome incorreto</span>
+                <label for="senha">Crie uma senha</label>
+                <input type="password" name="senha" id="senha" placeholder="senha">
+                <span id="senhaError" class="error">Nome incorreto</span>
+                <label for="confirmaSenha">Confirme sua senha</label>
+                <input type="password" name="confirmaSenha" id="confirmaSenha" placeholder="confirma senha">
+                <span id="confirmaSenhaError" class="error">Nome incorreto</span>
+                <label for="nascimento">Data de nascimento</label>
+                <input type="text" name="nascimento" id="nascimento" placeholder="yyyy-mm-dd">
+                <span id="nascimentoError" class="error">Nome incorreto</span>
             </div>
-        </section>
-        <!-- Fim logo e Redes Sociais-->
+            <div class="desktop">
+                <label>Selecione abaixo as suas preferências</label>
+                <ul class="titulos">
+                    <% preferencias.forEach(item => { %>
+                    <li><input type="checkbox" name="preferencias" value="<%= item.preferencias %>" id="pr<%= item.id%>"><label for="pr<%= item.id%>"> <%= item.preferencias %> </label></li>
+                    <% }) %>
+                </ul>
+            </div>
+            <div>
+                <button class="botao" type="reset">Limpar</button>
+                <button class="botao" type="submit">Enviar</button>
+            </div>
+        </form>
 
-        <div class="capsula">
-            <!-- Links -->
-            <section class="links">
-                <div>
-                    <h4>A Empresa</h4>
-                    <ul>
-                        <li>link</li>
-                        <li>link</li>
-                        <li>link</li>
-                        <li>link</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Comunidade</h4>
-                    <ul>
-                        <li>link</li>
-                        <li>link</li>
-                        <li>link</li>
-                        <li>link</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Úteis</h4>
-                    <ul>
-                        <li>link</li>
-                        <li>link</li>
-                        <li>link</li>
-                        <li>link</li>
-                    </ul>
-                </div>
-            </section>
-            <!-- Fim links -->
-            
-            <!-- Newsletter -->
-            <section class="newsletter">
-                <form>
-                    <label for="email">Receba Nossa newsletter: </label>
-                    <input type="email" name="email" id="email" required/>
-                    <button type="submit">enviar</button>
-                </form>
-            </section>
-            <!-- Fim newsletter -->
+       </section>
+        <!-- fim cadastro  -->
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <form>
+                <label for="email">Receba Nossa newsletter: </label>
+                <input type="email" name="email" id="email" required/>
+                <button type="submit">enviar</button>
+            </form>
+        </section>
+        <!-- Fim newsletter -->
         </div>
     </footer> 
     <!-- FIM FOOTER -->   
